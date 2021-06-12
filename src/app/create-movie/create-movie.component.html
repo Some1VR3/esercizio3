@@ -1,0 +1,42 @@
+<div class="padding">
+    <h1>Add Movie</h1>
+<form name = "createform" novalidate id ="createform" #createform ="ngForm" (ngSubmit)="create()">
+<div class="row">
+    <div class="col-4">
+        <label for ="title"></label>
+        <input type="text" id="title" #title = "ngModel" class="form-control" name="title" [(ngModel)]="newmovie.title" required>
+        <div class="alert alert-danger" [hidden]="title.valid"> The title is required</div> 
+        <div class ="row">
+            
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label for ="image">Inserisci un immagine</label>
+                <input type="text" id="image" #image = "ngModel" class="form-control" name="image" [(ngModel)]="newmovie.image" required>
+                <div class="alert alert-danger" [hidden]="image.valid"> The image is required</div> 
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for ="plot">Inserisci una trama</label>
+                    <input type="text" id="plot" #plot = "ngModel" class="form-control" name="plot" [(ngModel)]="newmovie.plot" required>
+                    <div class="alert alert-danger" [hidden]="plot.valid"> The plot is required</div> 
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for ="cast">Inserisci il cast</label>
+                        <input type="text" id="cast" #cast = "ngModel" class="form-control" name="cast" [(ngModel)]="newmovie.cast" required>
+                        <div class="alert alert-danger" [hidden]="cast.valid || cast.pristine"> The cast is required</div> 
+                    </div>
+                    </div>
+                    <div class ="row">
+                        <div class="col-4">
+                            <button type = "text" class="btn btn-info margin" [disabled]="createform.invalid"> Save</button>
+                            
+                        </div>
+                        </div>
+                
+    </div>
+</div>
+

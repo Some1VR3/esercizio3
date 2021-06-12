@@ -1,0 +1,47 @@
+<div class="padding">
+    <h1>Edit {{movie.title}}</h1>
+<form name = "editform" novalidate id ="editform" #editform ="ngForm" (ngSubmit)="update()">
+<div class="row">
+    <div class="col-4">
+        <label for ="title"></label>
+        <input type="text" id="title" #title = "ngModel" class="form-control" name="title" [(ngModel)]="mymovie.title" required>
+        <div class="alert alert-danger" [hidden]="title.valid"> The title is required</div> 
+        <div class ="row">
+            
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label for ="image"></label>
+                <input type="text" id="image" #image = "ngModel" class="form-control" name="image" [(ngModel)]="mymovie.image" required>
+                <div class="alert alert-danger" [hidden]="image.valid"> The image is required</div> 
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for ="plot"></label>
+                    <input type="text" id="plot" #plot = "ngModel" class="form-control" name="plot" [(ngModel)]="mymovie.plot" required>
+                    <div class="alert alert-danger" [hidden]="plot.valid"> The plot is required</div> 
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for ="cast"></label>
+                        <input type="text" id="cast" #cast = "ngModel" class="form-control" name="cast" [(ngModel)]="mymovie.cast" required>
+                        <div class="alert alert-danger" [hidden]="cast.valid"> The cast is required</div> 
+                    </div>
+                    </div>
+                    <div class ="row">
+                        <div class="col-4">
+                            <button type = "text" class="btn btn-info margin" [disabled]="editform.invalid"> Save</button>
+                            <button type='button' class="btn btn-info margin" (click)='resetMovie()'>Reset</button>
+                        </div>
+                        </div>
+                
+    </div>
+</div>
+<div class="testobianco">
+    <form>
+        <pre class="testobianco">{{movie | json}}</pre>
+        <pre class="testobianco">{{mymovie | json}}</pre>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+
+.fondo{
+    background-color: red; padding: 250px;
+}
+.centro{
+    font-size: 3em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+    font-style: inherit;
+ }
+
+ .testobianco{
+     color: white;
+ }
